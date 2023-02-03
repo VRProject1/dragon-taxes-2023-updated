@@ -413,13 +413,13 @@ var instructions = Handlebars.compile($("#main-tax-instructions").html());
 var detailedReport = Handlebars.compile($("#detailed-report").html());
 
 var gemRates = {
-    diamond:  getRandomInt(280, 360) * 10,
-    emerald:  getRandomInt(210, 300) * 10,
-    ruby:     getRandomInt(95,  190) * 10,
-    sapphire: getRandomInt(55,   90) * 10,
-    opal:     getRandomInt(55,   90) * 10,
-    amyethyst: 0,
-    pearl: 0,
+    diamond:  	getRandomInt(700, 3500) * getRandomInt(700, 3500),
+    emerald:  	getRandomInt(125, 625) 	* getRandomInt(125, 625),
+    ruby:     	getRandomInt(20,  100) 	* getRandomInt(20,  100),
+    sapphire: 	getRandomInt(12,  60) 	* getRandomInt(12,  60),
+    opal:     	getRandomInt(8,   40)	* getRandomInt(8,   40),
+    amyethyst: 	getRandomInt(4,   20)	* getRandomInt(4,   20),
+    pearl: 		getRandomInt(2,   10) 	* getRandomInt(2,   10),
 };
 var seasons = ["Frost","Feast","Roast","Xaust"]; // The four seasons of the dragon fiscal calendar
 var days = 92;
@@ -433,7 +433,7 @@ var MagicItem = function() {
   this.aura = getRandom(auras);
   this.quality = getRandom(ranking);
   this.condition = getRandom(ranking);
-  this.value = getRandomInt(100,1000) * getRandomInt(1,10) * 10;
+  this.value = getRandomInt(35,450) * getRandomInt(35,450);
 };
 
 var Art = function() {
@@ -443,7 +443,7 @@ var Art = function() {
   this.subject = getRandom(artSubjects);
   this.quality = getRandom(ranking);
   this.condition = getRandom(ranking);
-  this.value = getRandomInt(10, 1000) * getRandomInt(1,5) * 10;
+  this.value = getRandomInt(100, 3250) * getRandomInt(100, 3250);
 };
 
 var Treasure = function() {
@@ -451,25 +451,25 @@ var Treasure = function() {
   this.adjective = toTitleCase((getRandom(treasureAdjectives))) + " " + getRandom(treasureMaterials);
   this.quality = getRandom(ranking);
   this.condition = getRandom(ranking);
-  this.value = getRandomInt(10, 1000) * getRandomInt(1,3) * 10;
+  this.value = getRandomInt(50, 750) * getRandomInt(50, 750);
 };
 
 var PeasantGrievance = function() {
   this.name = randomName();
-  this.value = getRandomInt(4, 130) * 10;
+  this.value = getRandomInt(40, 300) * getRandomInt(40, 300);
   this.location = getRandom(lands);
   this.type = getRandom(["herds","crops"]);
 };
 
 var TownieGrievance = function() {
   this.name = randomName();
-  this.value = getRandomInt(10, 600) * 10;
+  this.value = getRandomInt(20, 150) * getRandomInt(20, 150);
   this.location = randomTownName() + ", " + getRandom(lands);
 };
 
 var ShopkeeperGrievance = function() {
   this.name = randomName();
-  this.value = getRandomInt(10, 600) * 10;
+  this.value = getRandomInt(75, 750) * getRandomInt(75, 750);
   this.location =  randomTownName() + ", " + getRandom(lands);
   this.isBar = Math.random() < 0.35;
   this.shopName = randomShopName(this.name, this.isBar);
@@ -478,7 +478,7 @@ var ShopkeeperGrievance = function() {
 var RoyalGrievance = function() {
   this.title = getRandom(nobleTitles);
   this.name = randomFamilyName();
-  this.value = getRandomInt(10, 80) * 100;
+  this.value = getRandomInt(250, 1500) * getRandomInt(250, 1500);
   this.aide = randomName();
   this.location = getRandom(lands);
 };
@@ -509,11 +509,11 @@ Stacker.prototype.add = function(el) {
 /* TaxRules */
 var taxRules = {
     exemptionLimits : {
-        art:  getRandomInt(500, 900) * 10,
-        treasure: getRandomInt(400,700) * 10,
-        crops: getRandomInt(30, 60) * 10,
-        herds: getRandomInt(40, 80) * 10,
-        provincial: getRandomInt(100, 360) * 10,
+        art:  getRandomInt(100, 3250) * getRandomInt(100, 3250),
+        treasure: getRandomInt(50, 750) * getRandomInt(50, 750),
+        crops: getRandomInt(25, 250) * getRandomInt(25, 250),
+        herds: getRandomInt(25, 250) * getRandomInt(25, 250),
+        provincial: getRandomInt(50, 450) * getRandomInt(50, 450),
     },
     exemptClasses: {
         nobles: getRandom([["Duke","Duchess"],["Count","Countess"],["Baron","Baroness"]]),
@@ -546,12 +546,12 @@ var finalizeRecord = function() {
   var b3Desc = "B1 + B2";
   addToRecord("B3", b3Value, b3Desc);
 
-  var b4Value = Math.floor(record.B3.total / 10);
-  var b4Desc = "B3 divided by 10";
+  var b4Value = Math.floor(record.B3.total / 5);
+  var b4Desc = "B3 divided by 5";
   addToRecord("B4", b4Value, b4Desc);
 
-  var b6Value = Math.floor(record.B5.total / 2);
-  var b6Desc = "B5 divided by 2";
+  var b6Value = Math.floor(record.B5.total * 4);
+  var b6Desc = "B5  multiplied by 4";
   addToRecord("B6", b6Value, b6Desc);
 
   var b7Value = record.B4.total + record.B6.total;
@@ -562,8 +562,8 @@ var finalizeRecord = function() {
   var c1Desc = "A6 + B7";
   addToRecord("C1", c1Value, c1Desc);
 
-  var c2Value = Math.floor(record.C1.total / 10);
-  var c2Desc = "C1 divided by 10";
+  var c2Value = Math.floor(record.C1.total / 5);
+  var c2Desc = "C1 divided by 5";
   addToRecord("C2", c2Value, c2Desc);
 };
 
@@ -621,9 +621,9 @@ mayhem.peasants = 0;
 mayhem.townsfolk = 0;
 mayhem.nobles = 0;
 
-var numNobleComplaints = getRandomInt(3, 4);
-var numPeasantComplaints = getRandomInt(3, 4);
-var numTownsefolkeComplaints = getRandomInt(3, 4);
+var numNobleComplaints = getRandomInt(2, 10);
+var numPeasantComplaints = getRandomInt(3, 15);
+var numTownsefolkeComplaints = getRandomInt(4, 20);
 
 for (var i = 0; i < numNobleComplaints; i++) {
     item = new RoyalGrievance();
@@ -684,7 +684,7 @@ shuffle(smallNotes).forEach(function(note) {
 });
 
 var hoard = {};
-hoard.gold = getRandomInt(100000,10000000);
+hoard.gold = getRandomInt(50,1250) * getRandomInt(10,6250);
 hoard.magicItems = [];
 hoard.art = [];
 hoard.treasures = [];
@@ -705,11 +705,11 @@ formStacker.add($('.d1045'));
 ledgerStacker = new Stacker($('body'), 450, 2);
 ledgerStacker.add($('.ledger'));
 
-var numEvents = getRandomInt(7,9);
-var numMagicItems = getRandomInt(3,4);
-var numArt = getRandomInt(3,4);
-var numTreasures = getRandomInt(3,4);
-var numGems = getRandomInt(2,3);
+var numEvents = getRandomInt(6,24);
+var numMagicItems = getRandomInt(8,12);
+var numArt = getRandomInt(2,4);
+var numTreasures = getRandomInt(3,6);
+var numGems = getRandomInt(4,8);
 var schedule = uniqueRandomInts(1, days * seasons.length, numEvents);
 var magicSchedule = getRandoms(schedule, numMagicItems);
 var artSchedule = getRandoms(schedule, numArt);
@@ -733,7 +733,7 @@ for (var season = 0; season < seasons.length; season++) {
         var eventChance = Math.random();
         var scehduleDay = (season) * days + day;
         if (schedule.indexOf(scehduleDay) > -1) {
-            var amount = getRandomInt(1000,20000);
+            var amount = getRandomInt(50,250) * getRandomInt(10,7500);
             hoard.gold += amount;
             income.gold += amount;
             var raidtype = getRandom(["Plundering " + getRandom(races.slice(1)) + "s",
@@ -744,7 +744,7 @@ for (var season = 0; season < seasons.length; season++) {
             ledgerTable.append(ledgerRow({description:"- Gold", amount:amount, balance:hoard.gold}));
             addToRecord("A1", amount, raidtype);
             if (gemSchedule.indexOf(scehduleDay) > -1) {
-                var num_gems = getRandomInt(3,30);
+                var num_gems = getRandomInt(1,20) * getRandomInt(1,75);
                 var gem = getRandom(Object.keys(gemRates));
                 income.gems += num_gems * gemRates[gem];
                 gem_plural = (gem == "ruby") ? " rubies" : " " + gem + "s";
@@ -807,7 +807,7 @@ var askedForExtraTime = -1;
 var done = false;
 var startTime = Date.now();
 var timer = function(){
-  var timeLimit = (askedForExtraTime <= 0) ? 10 * 60 * 1000 : 5 * 60 * 1000;
+  var timeLimit = (askedForExtraTime <= 0) ? 60 * 60 * 1000 : 15 * 60 * 1000;
   var currentTime = Date.now();
   var elapsed = currentTime - startTime;
   if (elapsed <= timeLimit && done === false) {
@@ -856,16 +856,16 @@ var createManualScoreTable = function() {
   expected.b2 = mayhem.townsfolk;
   var commonerMayhemSubtotal =  mayhem.peasants + mayhem.townsfolk;
   expected.b3 = commonerMayhemSubtotal;
-  var commonerAdjustment = (mayhem.peasants + mayhem.townsfolk) / 10;
+  var commonerAdjustment = (mayhem.peasants + mayhem.townsfolk) / 5;
   expected.b4 = commonerAdjustment;
   expected.b5 = mayhem.nobles;
-  var nobleAdjustment = mayhem.nobles / 2;
+  var nobleAdjustment = mayhem.nobles * 4;
   expected.b6 = nobleAdjustment;
   var mayhemAdjustment = commonerAdjustment + nobleAdjustment;
   expected.b7 = mayhemAdjustment;
   var mayhemAdjustedGrossIncome = grossIncome + mayhemAdjustment;
   expected.c1 = mayhemAdjustedGrossIncome;
-  var taxesOwed = Math.floor(mayhemAdjustedGrossIncome / 10);
+  var taxesOwed = Math.floor(mayhemAdjustedGrossIncome / 5);
   expected.c2 = taxesOwed;
   cols = shuffle(["a","b","c"]);
   rows = shuffle([1,2,3,4,5,6,7]);
@@ -927,16 +927,16 @@ var evaluateTaxes = function() {
   diffs.b2 = line("b2") - mayhem.townsfolk;
   var commonerMayhemSubtotal =  mayhem.peasants + mayhem.townsfolk;
   diffs.b3 = line("b3") - commonerMayhemSubtotal;
-  var commonerAdjustment = (mayhem.peasants + mayhem.townsfolk) / 10;
+  var commonerAdjustment = (mayhem.peasants + mayhem.townsfolk) / 5;
   diffs.b4 = line("b4") - commonerAdjustment;
   diffs.b5 = line("b5") - mayhem.nobles;
-  var nobleAdjustment = mayhem.nobles / 2;
+  var nobleAdjustment = mayhem.nobles * 4;
   diffs.b6 = line("b6") - nobleAdjustment;
   var mayhemAdjustment = commonerAdjustment + nobleAdjustment;
   diffs.b7 = line("b7") - mayhemAdjustment;
   var mayhemAdjustedGrossIncome = grossIncome + mayhemAdjustment;
   diffs.c1 = line("c1") - mayhemAdjustedGrossIncome;
-  var taxesOwed = Math.floor(mayhemAdjustedGrossIncome / 10);
+  var taxesOwed = Math.floor(mayhemAdjustedGrossIncome / 5);
   diffs.c2 = line("c2") - taxesOwed;
   var over = 0;
   var under = 0;
@@ -972,7 +972,7 @@ var evaluateTaxes = function() {
           result += "You overpaid by " + numberWithCommas(Math.floor(difference)) + " G. You won't get that back!";
         } else {
           result += "You underpaid by " + numberWithCommas(Math.abs(Math.floor(difference))) + " G.";
-          if (Math.abs(difference) > 5000) {
+          if (Math.abs(difference) > 100000) {
               result += " Expect a visit from the auditor!";
           }
         }
