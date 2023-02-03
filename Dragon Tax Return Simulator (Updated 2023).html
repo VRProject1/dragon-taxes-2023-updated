@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dragon Tax Return Simulator 2015</title>
+    <title>Dragon Tax Return Simulator 2023 Updated</title>
     <link type="text/css" rel="stylesheet" href="styles.css"/>
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -21,7 +21,7 @@
 
 <article class="sticky">
 <div>
-Taxes are due in ten minutes!!!
+Taxes are due in 1 Hour!!!
 </div>
 </article>
 
@@ -30,7 +30,7 @@ Taxes are due in ten minutes!!!
 <form id="d1045">
 <header>
 <h1>D-1045 Hoard Income Tax</h1>
-<span class="dnw">Do not write in this space <input id="dnw"></span>
+<span class="dnw">!NB! Do not write in this space <input id="dnw"></span>
 </header>
 <table>
 <tbody>
@@ -40,23 +40,23 @@ Taxes are due in ten minutes!!!
     <tr><td><label><em>A3.</em><span>Magic Items</span></label></td><td><input id="a3"></td></tr>
     <tr><td><label><em>A4.</em><span>Artwork</span></label></td><td><input id="a4"></td></tr>
     <tr><td><label><em>A5.</em><span>Other</span></label></td><td><input id="a5"></td></tr>
-    <tr><td><label><em>A6.</em><span>Add lines A1 through A5</span></label></td><td><input id="a6"></td></tr>
+    <tr><td><label><em>A6.</em><span>SUM A1+A2+A3+A4+A5</span></label></td><td><input id="a6"></td></tr>
 </tbody>
 <tbody>
     <tr><th rowspan="7">Mayhem Adjustement</th>
         <td><label><em>B1.</em><span>Agricultural Mayhem</span></label></td><td><input id="b1"></td></tr>
     <tr><td><label><em>B2.</em><span>Provincial Mayhem</span></label></td><td><input id="b2"></td></tr>
-    <tr><td><label><em>B3.</em><span>Add lines B1 and B2</span></label></td><td><input id="b3"></td></tr>
-    <tr><td><label><em>B4.</em><span>Divide line B3 by ten</span></label></td><td><input id="b4"></td></tr>
+    <tr><td><label><em>B3.</em><span>SUM B1 + B2 Province </span></label></td><td><input id="b3"></td></tr>
+    <tr><td><label><em>B4.</em><span>20% of B3 Province Restore</span></label></td><td><input id="b4"></td></tr>
     <tr><td><label><em>B5.</em><span>Noble Mayhem</span></label></td><td><input id="b5"></td></tr>
-    <tr><td><label><em>B6.</em><span>Divide line B5 by two</span></label></td><td><input id="b6"></td></tr>
-    <tr><td><label><em>B7.</em><span>Add lines B4 and B6</span></label></td><td><input id="b7"></td></tr>
+    <tr><td><label><em>B6.</em><span>400% of B5 Noble Restore</span></label></td><td><input id="b6"></td></tr>
+    <tr><td><label><em>B7.</em><span>SUM B4+B6 Total Restore</span></label></td><td><input id="b7"></td></tr>
     </tr>
 </tbody>
 <tbody>
     <tr><th rowspan="2">Taxes owed</th>
-        <td><label><em>C1.</em><span>Add lines A6 and B7</span></label></td><td><input id="c1"></td></tr>
-    <tr><td><label><em>C2.</em><span>Divide line C1 by ten. This is your tax owed.</span></label></td><td><input id="c2"></td></tr>
+        <td><label><em>C1.</em><span>SUM A6+B7 Subtotal TAX</span></label></td><td><input id="c1"></td></tr>
+    <tr><td><label><em>C2.</em><span>20% of C1, TAX payable</span></label></td><td><input id="c2"></td></tr>
 </tbody>
 </table>
 <div class="ouo">Space below this line for official use only.</div>
@@ -76,7 +76,7 @@ Taxes are due in ten minutes!!!
 
 <div id="intro" class="dialog js-show">
   <div>
-  <h1>Dragon Tax Return Simulator 2015</h1>
+  <h1>Dragon Tax Return Simulator 2023 Updated</h1>
   <p>Welcome to a world of fantasy and magic! A world of mysterious humanoids like the erks, the drevs, the gronks, and the glorns. And above them all, high in mountain peaks, dwell the majestic dragons.  In this game you will see through the eyes of one of these magnificent creatures.</p>
 
   <p>Dragons are wise, powerful, and long-lived but their pride brings them into conflict with other intelligent races. In 2008 D.Y. the High Dragon Council instituted a system of taxes and penalties to establish a facade of order, aid them in diplomatic negotiations to prevent all out war between the dragons and the humanoid peoples, and funnel the vast wealth of the dragons to themselves.</p>
@@ -102,7 +102,7 @@ Taxes are due in ten minutes!!!
   <p>The official council tax courier arrives for your tax forms and payment.</p>
   <div class="buttons">
   <button class="button-finish">Here you go!</button>
-  <button class="button-go">Please hold on! I need five more minutes!</button>
+  <button class="button-go">Please hold on! I need 15 more minutes!</button>
   </div>
   </div>
 </div>
@@ -323,6 +323,14 @@ Taxes are due in ten minutes!!!
 <td>Opal</td>
 <td>{{withCommas rates.opal}} G each</td>
 </tr>
+<tr>
+<td>Amyethyst</td>
+<td>{{withCommas rates.amyethyst}} G each</td>
+</tr>
+<tr>
+<td>Pearl</td>
+<td>{{withCommas rates.pearl}} G each</td>
+</tr>
 </tbody>
 </table>
 <h2>Line A3</h2>
@@ -357,13 +365,13 @@ This is your Hoard Gross Income for this year.</p>
 <p>Line B1 plus line B2. All non-excepted damage to commoners.</p>
 <h2>Line B4</h2>
 <h3>Commoner Mayhem Adjustment</h3>
-<p>Line B3 divided by ten. The typical 10% rate. Always round down.</p>
+<p>Line B3 divided by five. The typical 20% rate. Always round down.</p>
 <h2>Line B5</h2>
 <h3>Noble Mayhem</h3>
 <p>Please report all damages to property of Kings, Queens, Princes, and Princesses, and other nobles. Damages against {{rules.exemptClasses.nobles.[0]}}s and {{rules.exemptClasses.nobles.[1]}}es are excepted and do NOT need to be reported.</p>
 <h2>Line B6</h2>
 <h3>Noble Mayhem Adjustment</h3>
-<p>Line B5 divided by two. A special 50% rate as a token of our respect for nobles of the ground-dwelling races. Always round down.</p>
+<p>Line B5 multiplied by four. A special 400% rate as a respect for nobles of the ground-dwelling races. Always round down.</p>
 <h2>Line B7</h2>
 <h3>Mayhem Adjustment</h3>
 <p>Line B3 plus line B5. This is the penalty that will be added to your income for taxation purposes.</p>
@@ -381,7 +389,7 @@ This is your Hoard Gross Income for this year.</p>
 <p>Line A6 plus line B7. This is your hoard gross income plus your mayhem adjustment.</p>
 <h2>Line C2</h2>
 <h3>Taxes Owed</h3>
-<p>Line C1 divided by ten. Always round down.</p>
+<p>Line C2 equal to 20% of C1 (or C1 divide by five). Always round down.</p>
 <p><b>Please pay this amount to the official tax courier on the spot.</b></p>
     </article>
 </script>
