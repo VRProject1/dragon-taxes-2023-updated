@@ -74,8 +74,8 @@ article {
   width: 200px;
   height: 200px;
   background-color: #f8f8f8;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5),  inset 0 0 100px 15px rgba(50,0,0,0.3);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5),  inset 0 0 100px 15px rgba(50,0,0,0.3);
+  -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
   position: absolute;
   padding: 0;
 }
@@ -216,8 +216,9 @@ border-bottom: 1px solid black;
     font-family: "Kaushan Script", cursive;
     font-size: 12px;
     line-height: 16px;
-    background-image: repeating-linear-gradient(180deg,rgb(255,255,200),rgb(255,255,200) 17px, rgb(200,100,100) 17px, rgb(255,200,200) 18px);
-
+    background-color: #FFE4C8;
+	  -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
 }
 .ledger h1 {
     font-size: 16px;
@@ -303,7 +304,9 @@ border-bottom: 1px solid black;
   font-size: 14px;
   width: 260px;
   height: 360px;
-  background-color: #f8e2d2; 
+  background-color: #f8e2d2;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
   font-weight: bold;
   font-family: "Shadows Into Light", cursive;
   padding: 15px;
@@ -492,37 +495,19 @@ border-bottom: 1px solid black;
 .royal-complaint.paper-style-variant-1,
 .shopkeeper-complaint.paper-style-variant-1 {
    color: rgba(20,20,20, 0.75);
-   box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 100px 15px rgba(50,50,0,0.3);
-   background: rgb(230,230,230);
-   background: -webkit-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,200, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,210, 1));
-   background: -moz-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,200, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,210, 1));
-   background: -ms-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,200, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,210, 1));
-   background: -o-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,200, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,210, 1));
-   background: linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,200, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,210, 1));
-}
+   -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+   box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);}
 
 .complaint-note.paper-style-variant-2,
 .royal-complaint.paper-style-variant-2,
 .shopkeeper-complaint.paper-style-variant-2 {
    color: rgba(20,20,20, 1);
-   box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 100px 15px rgba(50,50,0,0.3);
-   background: rgb(230,230,230);
-   background: -webkit-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,220, 1));
-   background: -moz-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,220, 1));
-   background: -ms-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,220, 1));
-   background: -o-linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,220, 1));
-   background: linear-gradient(top, rgba(255,255,255, 1),  rgba(230,230,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(230,230,220, 1));
-}
+   -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+   box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);}
 .complaint-note.paper-style-variant-3 {
    color: rgba(40,40,40, 1);
-   box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 100px 15px rgba(50,50,0,0.3);
-   background: rgb(240,240,240);
-   background: -webkit-linear-gradient(top, rgba(255,255,255, 1),  rgba(240,240,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(240,240,220, 1));
-   background: -moz-linear-gradient(top, rgba(255,255,255, 1),  rgba(240,240,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(240,240,220, 1));
-   background: -ms-linear-gradient(top, rgba(255,255,255, 1),  rgba(240,240,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(240,240,220, 1));
-   background: -o-linear-gradient(top, rgba(255,255,255, 1),  rgba(240,240,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(240,240,220, 1));
-   background: linear-gradient(top, rgba(255,255,255, 1),  rgba(240,240,220, 1) 50%, rgba(255,255,255, 1) 51%, rgba(240,240,220, 1));
-}
+   -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);
+   box-shadow: 0 0 4px 1px rgba(0,0,0,0.5), inset 0 0 10px 10px rgba(50,50,0,0.05);}
 /* Final report */
 
 #final-report, #tips {
@@ -678,6 +663,7 @@ border-bottom: 1px solid black;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
+        -webkit-box-shadow: none !important;
         text-shadow: none !important;
     }
 
