@@ -12,15 +12,17 @@ Below Original 2015 description
 What I've changed:
 
 ## Changes in Updated Game:
-1) Increased amount of playing time: from 10+5 to 60+30 minutes
-2) Increased incomes to medium levels from 100KK to 1KK
-3) Increased quantity and value of Gems, Magic, Arts and Treasure (implemented to 2 Randomizers)
-4) Increased quantity and value fo appearing complaints (implemented to 2 Randomizers)
-5) Increased taxation, from 10% to 20% for civil mayhem, and massive increased from 50% to 400% for noble mayhem (royal families)
-6) Improved Ledger - so You can see prices and values immidiately
+1) Increased amount of playing time: from 10+5 to 60+30 minutes.
+2) Increased incomes to medium levels from 100KK to 1KK (100'000 - 1'000'000)
+3) Increased quantity and monetary values of Gems, Magic, Arts and Treasure items. (**1)
+4) Increased quantity and monetary value for appearing complaints. (**1)
+5) Increased taxation, from 10% to 20% for civil mayhem, and massive increased from 50% to 400% for noble mayhem (royal families, and property owners).
+6) Improved Ledger (Balance Sheet) - so You can see prices and values immidiately.
 7) Added fonts, what should be implemented, but they wasn't, right now it looks beautifully georgeous!
-8) Added All necessary Plugins, so No Dependencies, can play and practice taxes offline
-9) Simplify graphics, for less laggy gameplay - remove extra blur, shadows and no neccessary gradients
+8) Added necessary plugins in to Game Data assets, so - No Dependencies. You can play and practice taxes offline. It should work anywhere, and as Portable version of game.
+9) Simplified graphics, for less lags during gameplay - removed extra blur, also removed not-so-necessary shadows and linear gradients.
+
+(**1) - means this:  implemented as multiplication with 2 Random-Number Generators (or Number Randomizers)
 
 
 ## ================================================
@@ -29,7 +31,7 @@ What I've changed:
 
 A game created in 72 hours for [Ludum Dare](http://ludumdare.com/) 33 for the theme "You are the Monster".
 
-The game has been updated since the game jam release, but the original Ludum Dare entry version is preserved at https://walsh9.github.io/dragon-taxes/ld33-jam-version
+The game has been updated since the game jam release, but the original Ludum Dare entry version is preserved at https://walsh9.github.io/dragon-taxes
 
 [Ludum Dare entry page](http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=56320)
 
