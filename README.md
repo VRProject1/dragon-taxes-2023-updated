@@ -12,15 +12,15 @@ Below Original 2015 description
 What I've changed:
 
 ## Changes in Updated Game:
-> Increased amount of playing time: from 10+5 to 60+30 minutes
-> Increased incomes to medium levels from 100KK to 1KK
-> Increased quantity and value of Gems, Magic, Arts and Treasure (implemented to 2 Randomizers)
-> Increased quantity and value fo appearing complaints (implemented to 2 Randomizers)
-> Increased taxation, from 10% to 20% for civil mayhem, and massive increased from 50% to 400% for noble mayhem (royal families)
-> Improved Ledger - so You can see prices and values immidiately
-> Added fonts, what should be implemented, but they wasn't, right now it looks beautifully georgeous!
-> Added All necessary Plugins, so No Dependencies, can play and practice taxes offline
-> Simplify graphics, for less laggy gameplay - remove extra blur, shadows and no neccessary gradients
+1) Increased amount of playing time: from 10+5 to 60+30 minutes
+2) Increased incomes to medium levels from 100KK to 1KK
+3) Increased quantity and value of Gems, Magic, Arts and Treasure (implemented to 2 Randomizers)
+4) Increased quantity and value fo appearing complaints (implemented to 2 Randomizers)
+5) Increased taxation, from 10% to 20% for civil mayhem, and massive increased from 50% to 400% for noble mayhem (royal families)
+6) Improved Ledger - so You can see prices and values immidiately
+7) Added fonts, what should be implemented, but they wasn't, right now it looks beautifully georgeous!
+8) Added All necessary Plugins, so No Dependencies, can play and practice taxes offline
+9) Simplify graphics, for less laggy gameplay - remove extra blur, shadows and no neccessary gradients
 
 
 ## ================================================
